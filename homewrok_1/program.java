@@ -1,7 +1,6 @@
 package homewrok_1;
 
 import java.util.ArrayList;
-import java.util.Collections;
 
 /**
  * Задача. Рекурсивно найти все маршруты из a -> b , если действие k1 означает
