@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 /**
- Задача. Рекурсивно найти все способы достижения из a -> b , если действие k1 означает
- увеличить в с раз, а действие k2 - прибавить d.
+ * Задача. Рекурсивно найти все маршруты из a -> b , если действие k1 означает
+ * увеличить в с раз, а действие k2 - прибавить d.
  */
 public class program {
 
@@ -16,26 +16,23 @@ public class program {
         if (a == b) {
             arr.add(way);
             return;
-        }
-        else if (a > b) {
+        } else if (a > b) {
             return;
-        }
-        else {
+        } else {
             findWay(a * c, b, c, d, way + "k1 ");
             findWay(a + d, b, c, d, way + "k2 ");
         }
 
-
     }
 
     static String minWay(ArrayList<String> arr) {
-        
+
         String minWay = arr.get(0);
 
         for (String elem : arr) {
-            
+
             if (elem.length() < minWay.length()) minWay = elem;
-            
+
         }
         return minWay;
     }
@@ -44,25 +41,30 @@ public class program {
 
         int a = 6;
         int b = 78;
-        int c = 5;
-        int d = 3;
-        findWay(a,b,c,d,"");        
+        int c = 3;
+        int d = 5;
+        findWay(a, b, c, d, "");
 
-        StringBuilder strOut = new StringBuilder();
-        
-        strOut.append("Все доступные способы:\n\n");
+        if (arr.isEmpty())
+            System.out.println("Маршруты не найдены!");
+        else {
 
-        for (String elem : arr) {
+            StringBuilder strOut = new StringBuilder();
 
-            strOut.append(elem);
+            strOut.append("Все доступные маршруты:\n\n");
+
+            for (String elem : arr) {
+
+                strOut.append(elem);
+                strOut.append("\n");
+
+            }
+
             strOut.append("\n");
-            
-        }
-        
-        strOut.append("\n");
 
-        strOut.append("Самый быстрый способ:\n\n");
-        strOut.append(minWay(arr));
-        System.out.println(strOut);
+            strOut.append("Самый быстрый маршрут:\n\n");
+            strOut.append(minWay(arr));
+            System.out.println(strOut);
+        }
     }
 }
