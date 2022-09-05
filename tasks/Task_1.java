@@ -27,20 +27,15 @@ public class Task_1 {
     public static void solve(int[] a, int[] b, int i, int j, String way)
 
     {
-        if (i == a.length - 1 || j == b.length - 1) {
+        if (i == a.length || j == b.length) {
 
-            if (MaxLength < (way + a[i]).length()) {
+            if (MaxLength < way.length()) {
 
         
-            arr.add(way + a[i]);
-            MaxLength = (way + a[i]).length();
+                arr.add(way);
+                MaxLength = way.length();
 
             }
-
-            return;
-
-        } else if (i == a.length || j == b.length) {
-
             return;
         }
 
@@ -51,8 +46,10 @@ public class Task_1 {
                 solve(a, b, i + 1, j + 1, way + a[i]);
 
             } else {
-                solve(a, b, i + 1, j, way);
                 solve(a, b, i, j + 1, way);
+                solve(a, b, i + 1, j, way);
+                
+                               
             }
         }
 
