@@ -9,22 +9,23 @@ public class Program {
 
         return (n + 1) * n / 2;
     }
-    
+
     public static void main(String[] args) {
 
-        
         try (Scanner console = new Scanner(System.in)) {
             System.out.print("Введите число n для нахождения n-го треугольного числа --> ");
 
             int n = console.nextInt();
-           
-            System.out.printf("%d-е треугольное число - %d\n", n, triangleNumber(n));
+
+            if (n <= 0) {
+                System.out.println("Число должно быть больше 0");
+            } else {
+                System.out.printf("%d-е треугольное число - %d\n", n, triangleNumber(n));
+            }
         }
-        
+
         catch (InputMismatchException e) {
             System.out.println("Неверный ввод числа");
         }
-
     }
-    
 }
