@@ -1,4 +1,4 @@
-package homewrok_1;
+package homework_1;
 
 import java.util.ArrayList;
 
@@ -6,7 +6,7 @@ import java.util.ArrayList;
  * Задача. Рекурсивно найти все маршруты из a -> b , если действие k1 означает
  * увеличить в с раз, а действие k2 - прибавить d.
  */
-public class program {
+public class Program {
 
     static ArrayList<String> arr = new ArrayList<String>();
 
@@ -38,8 +38,8 @@ public class program {
 
     public static void main(String[] args) {
 
-        int a = 6;
-        int b = 78;
+        int a = 1;
+        int b = 99;
         int c = 3;
         int d = 5;
         findWay(a, b, c, d, "");

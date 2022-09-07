@@ -1,4 +1,4 @@
-package tasks;
+package lesson_2;
 
 import java.util.ArrayList;
 
@@ -9,8 +9,8 @@ public class Task_1 {
 
     public static void main(String[] args) {
 
-        int[] a = { 1, 3 , 4, 0, 3, 1, 3, 3, 3, 4, 7, 8 ,5, 6, 6, 7, 8};
-        int[] b = { 2, 1, 3, 5, 3, 5, 6, 7, 4, 8, 9 };
+        int[] a = { 1, 3 , 4, 0, 3, 1, 6, 7, 8};
+        int[] b = { 2, 1, 3, 5, 7, 4, 8, 9 };
 
         solve(a, b, 0, 0, "");
 
@@ -29,13 +29,13 @@ public class Task_1 {
     {
         if (i == a.length || j == b.length) {
 
-            if (MaxLength < way.length()) {
+            //if (MaxLength < way.length()) {
 
         
                 arr.add(way);
                 MaxLength = way.length();
 
-            }
+            //}
             return;
         }
 
