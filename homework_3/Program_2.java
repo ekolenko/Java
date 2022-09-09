@@ -1,5 +1,9 @@
 package homework_3;
 
+/**
+ * Реализовать алгоритм пирамидальной сортировки (HeapSort)
+ */
+
 public class Program_2 {
 
     public static void makeHeap(int[] a, int i, int n) {
