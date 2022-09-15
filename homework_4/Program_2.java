@@ -1,5 +1,9 @@
 import java.util.Arrays;
 
+
+/**
+ * Реализовать алгоритм сортировки слиянием.
+ */
 public class Program_2 {
 
   public static int[] mergeSort(int[] a) {
